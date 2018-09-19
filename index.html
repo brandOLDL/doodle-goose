@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome!</title>
+	<meta charset="UTF-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="Doodle Goose Illustration portfolio website designed and built by Liam Irwin at BrandNUDL Laboratories" name="description">
+	<meta content="Brandnudl.com, Liam Irwin, Doodle Goose, Lucy Rose Bolton, Illustration, Graphic Design, Web Design" name="keywords">
+	<meta content="Liam Irwin" name="author">
+	<link href="icon.png" rel="icon" type="image/png">
+
+	<style type="text/css">
+	
+	@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+	body {
+	   overflow: hidden;
+	   margin: 0 auto;
+	   height: 100vh;
+	}
+	div#enter {
+	   position: fixed;
+	   top: 10%;
+	   display: -webkit-flex;
+	   display: -moz-flex;
+	   display: -ms-flex;
+	   display: -o-flex;
+	   display: flex;
+	   justify-content: center;
+	   width: 100%;
+	   z-index: 1000;
+	}
+	button.enterSite {
+		font-size: 1.5em;
+		width: 200px;
+		background-color: rgba(0, 0, 0, 0.2);
+		color: #f2f2f2;
+		text-shadow: 1px 1px 1px #444;
+		-webkit-box-shadow: inset 0px 0px 38px 18px rgba(0,0,0,0.11);
+		-moz-box-shadow: inset 0px 0px 38px 18px rgba(0,0,0,0.11);
+		box-shadow: inset 0px 0px 38px 18px rgba(0,0,0,0.11);
+		border: none;
+		font-family: 'Raleway', sans-serif;
+		border-radius: 3px;
+		padding: 15px 8px;
+		transition: all 0.3s ease;
+	}
+	button:hover {
+	   	background-color: rgba(0, 0, 0, 0.1);
+	   letter-spacing: 2px;
+	   cursor: pointer;
+	}
+	div.wrapper {
+	   position: relative;
+	   width: 100%;
+	   max-width: 1600px;
+	   margin: 0 auto;
+	   background: url(sky.jpg) no-repeat center center;
+	   -webkit-background-size: cover;
+	   background-size: cover;
+	}
+	.grass, .tree, .hills, .geese, .mount, .clouds {
+	   width: 100%;
+	   height: 100vh;
+	   padding: 0;
+	   background-clip: padding-box;
+	   margin: 0 auto;
+	}
+	.grass {
+	   background: url(grass.png) no-repeat bottom;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.tree {
+	   background: url(tree.png) no-repeat bottom;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.hills {
+	   background: url(hills.png) no-repeat bottom;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.geese {
+	   background: url(geese.png) no-repeat;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.mount {
+	   background: url(mountain.png) no-repeat bottom;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.clouds {
+	   background: url(clouds.png) no-repeat center;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	@media screen and (orientation: landscape)
+			  	  and (max-width: 768px) {
+		.grass {
+		-webkit-background-size: cover;
+		background-size: cover;
+		}
+	}
+
+	</style>
+
+</head>
+<body>
+	<div id="enter">
+		<a href="dg-main.html"><button class="enterSite">Enter!</button></a>
+	</div>
+	<div class="wrapper">
+		<div id="scene">
+			<div class="clouds" data-depth="0.6"></div>
+			<div class="mount" data-depth="0.2"></div>
+			<div class="hills" data-depth="0.4"></div>
+			<div class="geese" data-depth="2.5"></div>
+			<div class="tree" data-depth="0.6"></div>
+			<div class="grass"></div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> 
+	<script>
+	   var scene = document.getElementById('scene');
+	   var parallaxInstance = new Parallax(scene);
+	</script>
+</body>
+</html>
